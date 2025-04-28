@@ -1,4 +1,3 @@
-
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage{float}
@@ -6,7 +5,7 @@
 \usepackage{hyperref}
 
 \title{CPU Scheduling Simulation Project\\CS 3502 - Operating Systems}
-\author{OwlTech Systems}
+\author{Aly Traore}
 \date{\today}
 
 \begin{document}
