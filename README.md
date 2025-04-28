@@ -1,9 +1,13 @@
-# cpu-scheduler-simulator
-CPU Scheduling Simulator
+# CPU Scheduling Simulator 🚀
+CPU Scheduling Simulator 🚀
 Summary
-This project is a CPU scheduling simulator, with the purpose of comparing the effectiveness of different scheduling algorithms under different workloads. It is designed to mimic real operating system functionality, thus allowing determination of the best scheduling methods according to various performance metrics.
+The CPU Scheduling Simulator is developed to simulate and compare different CPU scheduling algorithms in a controlled lab environment. The program allows the observation of the decisions made by operating systems and the comparative analysis of the efficiency of different algorithms based on various performance measures.
 
-The simulator has the ability to run the following algorithms:
+Stressing adaptability and genuineness, the simulator supports the integration of legacy algorithms combined with advanced scheduling mechanisms, thus enabling scholarly work and experimental assessment of performance.
+
+Primary Attributes
+
+✅ Simulates different algorithms for CPU scheduling:
 
 First Come, First Served (FCFS)
 
@@ -13,24 +17,22 @@ Round Robin (RR)
 
 Priority Scheduling
 
-Shortest Remaining Time First (SRTF) (newly implemented)
+Recently Shortest Remaining Time First (SRTF) was added.
 
-Multi-Level Feedback Queue (MLFQ) (newly implemented)
+Multi-Level Feedback Queue (MLFQ) 
 
-Features
+✅ Evaluates key performance metrics:
 
-Simulation of different CPU scheduling strategies.
+Mean Latency Duration (MLD)
 
-Measurement and evaluation of key performance indicators:
+Mean Response Time (MRT)
 
-Mean Waiting Time (MWT)
-
-Mean Turnaround Time (MTT)
-
-CPU Usage (%)
+CPU utilization percentage
 
 Throughput (Processes per Second)
 
-Response times (optional)
+Latency Duration 
 
-Support for both small-scale and large-scale workloads.
+Use of tables and charts makes visual comparisons unambiguous.
+
+✅ Designed for easy testing across simple, complex, and edge-case scenarios.
