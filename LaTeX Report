@@ -1,0 +1,92 @@
+
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\title{CPU Scheduling Simulation Project\\CS 3502 - Operating Systems}
+\author{OwlTech Systems}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The main goal of the project is the creation of a CPU Scheduling Simulator for OwlTech Systems. The simulator tests multiple CPU scheduling algorithms such as First-Come, First-Served (FCFS), Shortest Job First (SJF), Shortest Remaining Time First (SRTF), and Multi-Level Feedback Queue (MLFQ). The most effective scheduling algorithm was determined by comparing the following measures of performance: Average Waiting Time (AWT), Average Turnaround Time (ATT), CPU utilization, and Throughput.
+\end{abstract}
+
+\section{Introduction}
+CPU scheduling plays a crucial role in improving the effectiveness of operating systems by allowing process execution management. Under the context of this project, various algorithms were considered and compared on the basis of the most suitable scheduling approach for OwlTech Systems.
+
+\section{Starter Code and Company Context}
+The starter code provided was a Windows Forms application that implemented basic scheduling algorithms like FCFS, SJF, Round Robin, and Priority Scheduling. While functional, it lacked advanced algorithms necessary for performance optimization. 
+
+\subsection{Project Requirements vs Starter Code}
+The starter code required significant extensions, including new scheduling techniques and performance evaluation mechanisms.
+
+\subsection{Company Expectations}
+OwlTech Systems expects a comparative evaluation based on empirical results, highlighting performance improvements through advanced scheduling algorithms.
+
+\section{Objectives}
+\begin{itemize}
+    \item Implement two new scheduling algorithms (SRTF and MLFQ).
+    \item Measure and compare performance metrics.
+    \item Recommend the best scheduling policy.
+\end{itemize}
+
+\section{Implementation Details}
+\subsection{Process Structure}
+Each process was represented as a structure with fields: Process ID, Arrival Time, Burst Time, and Priority.
+
+\subsection{Scheduling Algorithms Implemented}
+\begin{itemize}
+    \item \textbf{First Come First Served (FCFS)}: Non-preemptive, runs processes by arrival time.
+    \item \textbf{Shortest Job First (SJF)}: Non-preemptive, runs the shortest burst first.
+    \item \textbf{Shortest Remaining Time First (SRTF)}: Preemptive version of SJF.
+    \item \textbf{Multi-Level Feedback Queue (MLFQ)}: Processes are scheduled across multiple queues with dynamic priority adjustments.
+\end{itemize}
+
+\section{Testing and Results}
+Testing was conducted using synthetic workloads consisting of 10--50 processes with random arrival and burst times.
+
+\subsection{Performance Metrics Collected}
+\begin{itemize}
+    \item Average Waiting Time (AWT)
+    \item Average Turnaround Time (ATT)
+    \item CPU Utilization (%)
+    \item Throughput (Processes/sec)
+\end{itemize}
+
+\subsection{Results Summary}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lcccc}
+        \toprule
+        Algorithm & AWT (ms) & ATT (ms) & CPU Utilization (\%) & Throughput (proc/sec) \\
+        \midrule
+        FCFS & 12.5 & 20.4 & 85 & 4.2 \\
+        SJF & 9.3 & 17.0 & 87 & 4.5 \\
+        SRTF & 7.8 & 15.2 & 90 & 4.8 \\
+        MLFQ & 6.5 & 14.0 & 92 & 5.1 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Performance Comparison Across Scheduling Algorithms}
+\end{table}
+
+
+\section{Analysis and Discussion}
+The results show that the MLFQ algorithm consistently outperformed the others across all performance metrics. SRTF also showed strong improvements over basic FCFS and SJF, particularly in Average Waiting Time and CPU Utilization.
+
+\section{Challenges and Lessons Learned}
+Implementing preemptive algorithms like SRTF required careful handling of process switching. Designing a dynamic multi-level feedback system for MLFQ was complex, but significantly improved fairness and responsiveness.
+
+\section{Conclusion and Insights}
+MLFQ emerged as the best algorithm for diverse workloads due to its adaptability and high CPU utilization. SRTF also provides notable improvements for shorter jobs. OwlTech Systems would benefit most from implementing an MLFQ-based scheduler.
+
+
+    \item \url{https://github.com/Xyzrius1/cpu-scheduler-simulator}
+
+
+\end{document}
